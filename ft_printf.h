@@ -6,7 +6,7 @@
 /*   By: pcervant <pcervant@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 18:53:03 by pcervant          #+#    #+#             */
-/*   Updated: 2024/11/06 12:05:46 by pcervant         ###   ########.fr       */
+/*   Updated: 2024/11/06 17:43:45 by pcervant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 
 int	ft_printchar(int c);
 int	ft_printf(const char *format, ...);
-int	ft_printhex(unsigned int c, const char format);
+int	ft_print_hex(unsigned int nr, char *dict);
 int	ft_printnbr(int c);
 int	ft_printporc(void);
 int	ft_printptr(uintptr_t ptr);

@@ -6,7 +6,7 @@
 /*   By: pcervant <pcervant@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 18:16:13 by pcervant          #+#    #+#             */
-/*   Updated: 2024/11/06 11:56:17 by pcervant         ###   ########.fr       */
+/*   Updated: 2024/11/06 13:35:50 by pcervant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,12 @@ int	ft_printnbr(int n)
 	valor = 0;
 	if (n < 0)
 	{
-		ft_printchar('-');
 		if (n == -2147483648)
 		{
-			write(1, "2147483648", 11);
-			return (11);
+			return (ft_printstr("-2147483648"));
 		}
+		ft_printchar('-');
+		valor = 1;
 		n = -n;
 	}
 	if (n > 9)

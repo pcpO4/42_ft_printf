@@ -6,7 +6,7 @@
 /*   By: pcervant <pcervant@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/12 11:20:39 by pcervant          #+#    #+#             */
-/*   Updated: 2024/11/06 12:04:48 by pcervant         ###   ########.fr       */
+/*   Updated: 2024/11/06 13:23:05 by pcervant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,15 +46,12 @@ int	ft_printptr(uintptr_t ptr)
 	int	valor;
 
 	valor = 0;
-	valor += write(1, "0x", 2);
 	if (ptr == 0)
 	{
-		valor += write(1, "0", 1);
+		return (write(1, "(nil)", 5));
 	}
-	else
-	{
-		valor += ft_len(ptr);
-		putptr(ptr);
-	}
+	valor += write(1, "0x", 2);
+	valor += ft_len(ptr);
+	putptr(ptr);
 	return (valor);
 }
